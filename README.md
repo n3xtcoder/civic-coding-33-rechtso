@@ -228,35 +228,6 @@ logging.basicConfig(level=logging.DEBUG)
 - Verwenden Sie `ministral-8b-latest` für budgetbewusste Mistral-Nutzung
 - Berücksichtigen Sie anbieter-spezifische Ratenlimits und Kontingente
 
-## 🔮 Zukünftige Erweiterungen
-
-- [ ] Streaming-Unterstützung für bessere Benutzererfahrung
-- [ ] Speicherverwaltung für Gespräche
-- [ ] Anbieter-Lastverteilung
-- [ ] Benutzerdefinierte Modelle
-- [ ] Erweiterte OCR-Integration
-- [ ] Mehrsprachige Unterstützung
-
-## 🤝 Beitragen
-
-1. Fork das Repository
-2. Erstellen Sie einen Feature-Branch (`git checkout -b feature/AmazingFeature`)
-3. Committen Sie Ihre Änderungen (`git commit -m 'Add some AmazingFeature'`)
-4. Pushen Sie zum Branch (`git push origin feature/AmazingFeature`)
-5. Öffnen Sie einen Pull Request
-
-## 📄 Lizenz
-
-Dieses Projekt steht unter der MIT-Lizenz. Siehe [LICENSE](LICENSE) für Details.
-
-## 📞 Support
-
-Bei Fragen oder Problemen:
-
-1. Überprüfen Sie die Dokumentation
-2. Testen Sie mit `test_imports.py`
-3. Überprüfen Sie Ihre API-Schlüssel
-4. Erstellen Sie ein Issue im Repository
 
 ## 🔗 Nützliche Links
 
@@ -267,5 +238,3 @@ Bei Fragen oder Problemen:
 - [Anthropic Console](https://console.anthropic.com/)
 
 ---
-
-**Entwickelt mit ❤️ für die deutsche Rechtsberatung**
