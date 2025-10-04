@@ -170,13 +170,6 @@ Siehe [SECRETS_README.md](app/.streamlit/SECRETS_README.md) für eine vollständ
 
 3. **Factory-Methode aktualisieren**
 
-### Tests ausführen
-
-```bash
-cd app
-python test_imports.py  # Testet alle Imports und Konfiguration
-```
-
 ## 🚨 Wichtige Hinweise
 
 ### Rechtlicher Disclaimer
@@ -206,28 +199,6 @@ pip install langchain-mistralai langchain-openai langchain-anthropic mistralai
 - Überprüfen Sie die Gültigkeit Ihres API-Schlüssels
 - Kontrollieren Sie Ihr Guthaben bei dem Anbieter
 - Überprüfen Sie anbieter-spezifische Ratenlimits
-
-### Debug-Modus aktivieren
-
-```python
-import logging
-logging.basicConfig(level=logging.DEBUG)
-```
-
-## 📊 Performance-Optimierung
-
-### Anbieter-Auswahl
-
-- **Mistral**: Beste für deutsche Texte, kosteneffizient
-- **OpenAI**: Beste für komplexe Argumentation, Vision-Aufgaben
-- **Anthropic**: Beste für lange Dokumente, nuanciertes Verständnis
-
-### Kosteneffizienz
-
-- Verwenden Sie `gpt-4o-mini` für kosteneffiziente OpenAI-Nutzung
-- Verwenden Sie `ministral-8b-latest` für budgetbewusste Mistral-Nutzung
-- Berücksichtigen Sie anbieter-spezifische Ratenlimits und Kontingente
-
 
 ## 🔗 Nützliche Links
 
