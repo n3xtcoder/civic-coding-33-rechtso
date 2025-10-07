@@ -57,9 +57,9 @@ pip install -r requirements.txt
 ### 3. Konfiguration einrichten
 ```bash
 # Beispiel-Konfiguration kopieren
-cp app/.streamlit/secrets_example.toml app/.streamlit/secrets.toml
+cp .env.example .env
 
-# secrets.toml mit Ihren API-Schlüsseln bearbeiten
+# .env mit Ihren API-Schlüsseln bearbeiten
 ```
 
 ### 4. Anwendung starten
@@ -73,43 +73,42 @@ streamlit run pages/1_📄_Erkläre_mein_Dokument.py
 ### Schnelle Einrichtung
 
 1. **Primären LLM-Anbieter wählen:**
-   ```toml
-   LLM_PROVIDER = "mistral"  # oder "openai" oder "anthropic"
+   ```bash
+   LLM_PROVIDER=mistral  # oder "openai" oder "anthropic"
    ```
 
 2. **API-Schlüssel konfigurieren:**
-   ```toml
+   ```bash
    # Mistral (immer erforderlich für OCR)
-   MISTRAL_API_KEY = "ihr_mistral_api_schluessel"
+   MISTRAL_API_KEY=ihr_mistral_api_schluessel
    
    # OpenAI (optional - nur wenn OpenAI verwendet wird)
-   OPENAI_API_KEY = "ihr_openai_api_schluessel"
+   OPENAI_API_KEY=ihr_openai_api_schluessel
    
    # Anthropic (optional - nur wenn Anthropic verwendet wird)
-   ANTHROPIC_API_KEY = "ihr_anthropic_api_schluessel"
+   ANTHROPIC_API_KEY=ihr_anthropic_api_schluessel
    ```
 
 ### Detaillierte Konfiguration
 
-Siehe [SECRETS_README.md](app/.streamlit/SECRETS_README.md) für eine vollständige Anleitung zur Konfiguration.
+Siehe [ENV_README.md](ENV_README.md) für eine vollständige Anleitung zur Konfiguration.
 
 ## 📁 Projektstruktur
 
 ```
 23_RECHTSO/
-├── app/                          # Hauptanwendungsverzeichnis
-│   ├── .streamlit/              # Streamlit-Konfiguration
-│   │   ├── secrets.toml         # Ihre Konfiguration (privat!)
-│   │   ├── secrets_example.toml # Konfigurationsvorlage
-│   │   └── SECRETS_README.md    # Konfigurationsanleitung
-│   ├── pages/                   # Streamlit-Seiten
+├── .env                         # Ihre Konfiguration (privat!)
+├── .env.example                # Konfigurationsvorlage
+├── ENV_README.md               # Konfigurationsanleitung
+├── app/                        # Hauptanwendungsverzeichnis
+│   ├── pages/                  # Streamlit-Seiten
 │   │   ├── 1_📄_Erkläre_mein_Dokument.py
 │   │   └── 2_📄_Erstelle_einen_Widerspruch.py
-│   ├── config.py                # Konfigurationsverwaltung
-│   ├── llm_providers.py         # LLM-Anbieter-Abstraktion
-│   ├── conversation_service.py  # Gesprächsservice
-│   ├── ocr_service.py          # OCR-Service
-│   ├── utils.py                # Hilfsfunktionen
+│   ├── config.py               # Konfigurationsverwaltung
+│   ├── llm_providers.py        # LLM-Anbieter-Abstraktion
+│   ├── conversation_service.py # Gesprächsservice
+│   ├── ocr_service.py         # OCR-Service
+│   ├── utils.py               # Hilfsfunktionen
 │   └── test_imports.py         # Import-Test-Skript
 ├── requirements.txt             # Python-Abhängigkeiten
 ├── README.md                   # Diese Datei
